@@ -1,7 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 
-function App() {
+function App() {//Do The Slider!!!!!!!!!!!!!!!!!!!!!!!!!!!
   return (
     <ContainerDiv>
       <Header>
@@ -34,6 +34,10 @@ function App() {
         <PriceDiv>$799</PriceDiv>
         <OrderButton>ORDER NOW</OrderButton>
       </ViveProDiv>
+      <InfoDiv>
+        <BackHeadSetImg src="../src/assets/info/backheadset.png" alt="backheadset" />
+        <div>Slider</div>
+      </InfoDiv>
     </ContainerDiv>
   );
 }
@@ -44,6 +48,29 @@ const ContainerDiv = styled.div`
   height: 4318px;
   background-color: black;
 `;
+//Info CSS
+const InfoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  width: 320px;
+  height: 718px;
+  left: 20px;
+  top: 777px;
+
+  background: linear-gradient(90deg, rgba(0, 235, 207, 0.45) 0%, rgba(113, 19, 170, 0.51) 46.94%);
+filter: blur(150px);
+`;
+const BackHeadSetImg = styled.img`
+position: absolute;
+width: 320px;
+height: 255px;
+left: 0px;
+top: 14px;
+`;
+
+//VivePro CSS
 const ViveProDiv = styled.div`
   position: relative;
   top: -80px;
@@ -85,18 +112,11 @@ const PriceDiv = styled.div`
   opacity: 0.99;
 `;
 const OrderButton = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px;
-  gap: 10px;
-
   position: absolute;
   width: 320px;
   height: 48px;
   left: 20px;
-  bottom: 13px;
+  bottom: 70px;
 
   background: linear-gradient(90deg, #09535d 35.73%, #3a0099 100%);
   border-radius: 5px;
@@ -108,7 +128,7 @@ const OrderButton = styled.button`
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-`;
+`; //VivePro CSS
 
 //HEADER css
 const Button = styled.button`
