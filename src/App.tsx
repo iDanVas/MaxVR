@@ -1,7 +1,9 @@
 import "./App.css";
 import styled from "styled-components";
 
-function App() {//Do The Slider!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function App() {
+  //Find why the header goes down
+  //Do The Slider!!!!!!!!!!!!!!!!!!!!!!!!!!!
   return (
     <ContainerDiv>
       <Header>
@@ -35,7 +37,10 @@ function App() {//Do The Slider!!!!!!!!!!!!!!!!!!!!!!!!!!!
         <OrderButton>ORDER NOW</OrderButton>
       </ViveProDiv>
       <InfoDiv>
-        <BackHeadSetImg src="../src/assets/info/backheadset.png" alt="backheadset" />
+        <BackHeadSetImg
+          src="../src/assets/info/backheadset.png"
+          alt="backheadset"
+        />
         <div>Slider</div>
       </InfoDiv>
     </ContainerDiv>
@@ -46,7 +51,8 @@ export default App;
 
 const ContainerDiv = styled.div`
   height: 4318px;
-  background-color: black;
+  width: 360px;
+  background-color: #990e0e68;
 `;
 //Info CSS
 const InfoDiv = styled.div`
@@ -59,15 +65,19 @@ const InfoDiv = styled.div`
   left: 20px;
   top: 777px;
 
-  background: linear-gradient(90deg, rgba(0, 235, 207, 0.45) 0%, rgba(113, 19, 170, 0.51) 46.94%);
-filter: blur(150px);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 235, 207, 0.45) 0%,
+    rgba(113, 19, 170, 0.51) 46.94%
+  );
+  filter: blur(150px);
 `;
 const BackHeadSetImg = styled.img`
-position: absolute;
-width: 320px;
-height: 255px;
-left: 0px;
-top: 14px;
+  position: absolute;
+  width: 320px;
+  height: 255px;
+  left: 0px;
+  top: 14px;
 `;
 
 //VivePro CSS
@@ -137,13 +147,15 @@ const Button = styled.button`
   border: 0;
 `;
 const Header = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0px;
-  height: 74px;
-  width: 100%;
+  /* height: 74px; */
   background-color: black;
   display: flex;
   justify-content: space-between;
+
+
+  border: 2px red solid;
 `;
 const LogoDiv = styled.div`
   display: flex;
